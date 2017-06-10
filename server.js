@@ -50,6 +50,13 @@ app.get('/about',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle:"Project Page",
+        projectLink: "https://github.com/udayakiranss/node-course-2-webserver"
+    });
+});
+
 app.get('/bad',(req,res)=>{
     res.send({
         errorMessage:"Problem in rendering the page"
